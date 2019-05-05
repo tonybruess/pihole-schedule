@@ -1,0 +1,14 @@
+# minute    hour    day     month    day of the week
+# 0-59      0-23    1-31    1-12     0-7 (0 and 7 are both sunday)
+
+# block instagram monday 5am - friday 5pm
+*  5 * * 1 pihole-block instagram
+* 17 * * 5 pihole-unblock instagram
+
+# block twitter 10pm - 5pm everyday
+* 22 * * * pihole-block twitter
+*  5 * * * pihole-unblock twitter
+
+# block slack friday 5pm - sunday 5pm
+* 17 * * 5 pihole-block slack
+* 17 * * 0 pihole-unblock slack

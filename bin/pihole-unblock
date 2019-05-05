@@ -1,0 +1,4 @@
+BIN_DIR=$(cd `dirname $(dirname $0)` && pwd)
+DOMAINS=$(<$BIN_DIR/../lists/$1)
+
+pihole --wild -d $DOMAINS
